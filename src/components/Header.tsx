@@ -1,0 +1,151 @@
+"use client";
+
+import { useState, useEffect } from "react";
+import Image from "next/image";
+import content from "@/data/content.json";
+import { Phone, Mail, Menu, X } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
+
+export default function Header() {
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const navLinks = [
+    { name: "Início", href: "#" },
+    { name: "Serviços", href: "#servicos" },
+    { name: "Diferenciais", href: "#diferenciais" },
+    { name: "Projetos", href: "#projetos" },
+    { name: "Sobre Nós", href: "#sobre" },
+    { name: "Depoimentos", href: "#depoimentos" },
+  ];
+
+  return (
+    <header className="w-full fixed top-0 left-0 z-50 transition-all duration-300">
+      {/* Top Bar - Maroon - Hidden when scrolled to keep header thin */}
+      <AnimatePresence>
+        {!isScrolled && (
+          <motion.div 
+            initial={{ height: "auto", opacity: 1 }}
+            animate={{ height: "auto", opacity: 1 }}
+            exit={{ height: 0, opacity: 0 }}
+            className="bg-[var(--color-innova-maroon)] text-white/90 py-2 px-4 md:px-8 text-xs md:text-sm font-medium flex flex-col sm:flex-row justify-between items-center gap-2 overflow-hidden"
+          >
+            <div className="flex items-center gap-6">
+              <a href={content.company.whatsappLink} className="flex items-center gap-2 hover:text-white transition-colors">
+                <Phone size={14} /> {content.company.whatsapp}
+              </a>
+              <a href={`mailto:${content.company.email}`} className="flex items-center gap-2 hover:text-white transition-colors">
+                <Mail size={14} /> {content.company.email}
+              </a>
+            </div>
+            <div className="font-bold tracking-wider">
+              {content.hero.badge}
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+
+      {/* Main Navigation - Dynamic Background */}
+      <div 
+        className={`transition-all duration-500 border-b relative ${
+          isScrolled 
+            ? "bg-white/95 backdrop-blur-md border-gray-200 h-16 shadow-lg" 
+            : "bg-transparent border-transparent py-6 md:py-10"
+        }`}
+      >
+        <div className="max-w-7xl mx-auto px-4 flex justify-between items-center h-full relative">
+          {/* Logo Container - Prevents expanding the header */}
+          <div className="relative w-40 md:w-56 h-full flex items-center">
+            <a href="#" className={`absolute transition-all duration-500 z-[60] ${isScrolled ? 'top-1/2 -translate-y-[45%]' : 'top-1/2 -translate-y-1/2'}`}>
+              <Image 
+                src="/images/logo innova home.png" 
+                alt="Innova Pinturas" 
+                width={240} 
+                height={80} 
+                priority
+                className={`w-auto object-contain transition-all duration-500 transform-gpu
+                  ${isScrolled 
+                    ? 'h-20 md:h-24 brightness-100 drop-shadow-[0_15px_25px_rgba(0,0,0,0.25)]' 
+                    : 'h-14 md:h-32 brightness-0 invert'
+                  }`}
+              />
+            </a>
+          </div>
+
+          {/* Desktop Nav Links */}
+          <nav className={`hidden lg:flex items-center gap-8 font-medium text-sm transition-colors ${isScrolled ? 'text-gray-700' : 'text-white/90 drop-shadow-md'}`}>
+            {navLinks.map((link) => (
+              <a key={link.name} href={link.href} className="hover:text-[var(--color-innova-yellow)] transition-colors">
+                {link.name}
+              </a>
+            ))}
+          </nav>
+
+          {/* CTA Desktop & Mobile Toggle */}
+          <div className="flex items-center gap-4">
+            <div className="hidden md:block">
+              <motion.a 
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.97 }}
+                href={content.company.whatsappLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-[var(--color-innova-yellow)] text-black font-bold text-sm px-6 py-2.5 shadow-md inline-block uppercase tracking-wide"
+              >
+                Orçamento Grátis
+              </motion.a>
+            </div>
+            
+            {/* Mobile Menu Toggle */}
+            <button 
+              className={`lg:hidden p-2 transition-colors ${isScrolled ? 'text-black' : 'text-white'}`}
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            >
+              {isMobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
+            </button>
+          </div>
+        </div>
+      </div>
+
+      {/* Mobile Navigation */}
+      <AnimatePresence>
+        {isMobileMenuOpen && (
+          <motion.div
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            transition={{ duration: 0.2 }}
+            className="lg:hidden absolute top-full left-0 w-full bg-white shadow-xl border-b border-gray-100 flex flex-col py-4 px-6 gap-4"
+          >
+            {navLinks.map((link) => (
+              <a 
+                key={link.name} 
+                href={link.href} 
+                onClick={() => setIsMobileMenuOpen(false)}
+                className="text-gray-800 font-bold text-lg py-2 border-b border-gray-50 hover:text-[var(--color-innova-yellow)]"
+              >
+                {link.name}
+              </a>
+            ))}
+            <a 
+              href={content.company.whatsappLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-[var(--color-innova-yellow)] text-black font-black text-center py-4 mt-4 text-lg uppercase tracking-wide"
+            >
+              Orçamento Grátis
+            </a>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </header>
+  );
+}

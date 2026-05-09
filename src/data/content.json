@@ -1,0 +1,111 @@
+{
+  "company": {
+    "name": "Innova Pinturas",
+    "cnpj": "48.109.429/0001-48",
+    "address": "Avenida José Rodrigues de morais neto Qd 29 Lt 21, Parque Amazonas, Goiânia (Goiás)",
+    "whatsapp": "(62) 98344-4539",
+    "whatsappLink": "https://wa.me/5562983444539",
+    "email": "contato@innovapinturas.com"
+  },
+  "hero": {
+    "badge": "ATENDENDO GOIÂNIA E REGIÃO",
+    "title": "Transforme Seu",
+    "titleHighlight1": "Espaço com",
+    "titleHighlight2": "Quem",
+    "titleHighlight3": "Entende de Pintura",
+    "description": "Equipe rápida, limpa e confiável. Somos especialistas em transformar ambientes residenciais e comerciais com acabamento premium e garantia de 100% de satisfação.",
+    "ctaPrimary": "Solicitar Orçamento Grátis",
+    "ctaSecondary": "Ver Projetos",
+    "image": "/images/Renove Seu Mundo com a Innova!.png"
+  },
+  "authority": [
+    { "name": "Una Imobiliária", "image": "una" },
+    { "name": "Urbano Engenharia", "image": "urbano" },
+    { "name": "Evando Marques", "image": "evando" },
+    { "name": "Fort Tintas", "image": "fort" }
+  ],
+  "services": {
+    "title": "Especialidades em",
+    "titleHighlight": "Pintura",
+    "subtitle": "O carro-chefe da nossa empresa. Serviços executados com perfeição para cada tipo de necessidade.",
+    "list": [
+    {
+      "id": "residencial",
+      "title": "Pintura Residencial",
+      "description": "Deixe sua casa renovada com um acabamento impecável. Realizamos pintura de casas e apartamentos com agilidade, limpeza e atenção aos detalhes.",
+      "icon": "Home",
+      "image": "/images/pintura-residencial-premium.png"
+    },
+    {
+      "id": "comercial",
+      "title": "Pintura Comercial",
+      "description": "Ambientes comerciais modernos e profissionais. Valorizamos sua empresa com pintura de escritórios, lojas e fachadas com o mínimo de interrupção.",
+      "icon": "Building2",
+      "image": "/images/pintura-comercial-premium.png"
+    },
+    {
+      "id": "decorativa",
+      "title": "Pintura Decorativa",
+      "description": "Ambientes personalizados com estilo e sofisticação. Oferecemos pintura com efeitos decorativos como cimento queimado, texturas, grafiato e pintura 3D.",
+      "icon": "Sparkles",
+      "image": "https://images.unsplash.com/photo-1615529182904-14819c35db37?q=80&w=1780&auto=format&fit=crop"
+    }
+  ]},
+  "stats": [
+    { "value": 15, "suffix": "+", "label": "ANOS DE EXPERIÊNCIA" },
+    { "value": 500, "suffix": "+", "label": "PROJETOS REALIZADOS" },
+    { "value": 99, "suffix": "%", "label": "AMBIENTE LIMPO" },
+    { "value": 100, "suffix": "%", "label": "SATISFAÇÃO GARANTIDA" }
+  ],
+  "technicalDiff": [
+    { "percent": 95, "title": "Aproveitamento do material", "description": "Uso inteligente de recursos evitando desperdícios" },
+    { "percent": 99, "title": "Ambiente Limpo", "description": "Sem vestígios após a finalização do serviço" },
+    { "percent": 85, "title": "Orçamentos Aprovados", "description": "Pelo nosso excelente custo-benefício e qualidade" }
+  ],
+  "multiservices": [
+    {
+      "title": "PERSONALIZAÇÃO",
+      "subtitle": "Renovação ambiente",
+      "icon": "PaintRoller",
+      "image": "/images/solucao-personalizacao.png"
+    },
+    {
+      "title": "INSTALAÇÕES",
+      "subtitle": "Manutenção rápida",
+      "icon": "Wrench",
+      "image": "/images/solucao-instalacoes.png"
+    },
+    {
+      "title": "REFORMAS",
+      "subtitle": "Obras e Reformas",
+      "icon": "HardHat",
+      "image": "/images/solucao-reformas.png"
+    },
+    {
+      "title": "ELETRICISTA",
+      "subtitle": "Ajustes de quadro",
+      "icon": "Lightbulb",
+      "image": "/images/solucao-eletricista.png"
+    }
+  ],
+  "portfolio": [
+    { "id": 1, "image": "/images/dirty_clean_exterior_1778170899090.png", "title": "Antes e Depois - Fachada" },
+    { "id": 2, "image": "/images/dirty_clean_bedroom_1778170851605.png", "title": "Antes e Depois - Quarto" },
+    { "id": 3, "image": "/images/dirty_clean_kitchen_1778170868756.png", "title": "Antes e Depois - Cozinha" },
+    { "id": 4, "image": "/images/dirty_clean_hallway_1778170885700.png", "title": "Antes e Depois - Corredor" },
+    { "id": 5, "image": "/images/before_after_living_room_1778165915315.png", "title": "Antes e Depois - Sala de Estar" },
+    { "id": 6, "image": "/images/before_after_commercial_1778165933197.png", "title": "Antes e Depois - Loja/Comércio" }
+  ],
+  "about": {
+    "title": "MUITO MAIS QUE PINTURA, UMA TRANSFORMAÇÃO",
+    "content": "A Innova Pinturas nasceu com a missão de elevar o padrão de acabamento em Goiânia. Não somos apenas pintores, somos artesãos de espaços. Compreendemos que cada imóvel tem uma história e merece ser tratado com o máximo respeito, entregando pontualidade, limpeza impecável e um resultado que surpreende."
+  },
+  "testimonials": [
+    { "name": "Una Imobiliária", "role": "Goiânia", "text": "Empresa responsável e competente, é a nossa satisfação tê-los conosco como parceiros." },
+    { "name": "Antonio Silva", "role": "Cliente Residencial", "text": "Profissionalismo e competência! Obrigado pelo serviço executado com maestria." },
+    { "name": "Augusto Jonas", "role": "Setor Oeste", "text": "O serviço era simples, mas foi feito com um capricho excepcional. Muito obrigado!" },
+    { "name": "Carlos Mendes", "role": "Síndico", "text": "A equipe da Innova transformou a fachada do nosso condomínio. Trabalho limpo, rápido e de extrema qualidade." },
+    { "name": "Marina Diniz", "role": "Arquiteta", "text": "Indico a Innova de olhos fechados. O acabamento que eles entregam valoriza muito os meus projetos de interiores." },
+    { "name": "Roberto Farias", "role": "Empresário", "text": "Pintura comercial feita no final de semana, sem atrapalhar o funcionamento da loja. Resultado fantástico." }
+  ]
+}

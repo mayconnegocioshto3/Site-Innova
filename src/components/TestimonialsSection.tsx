@@ -41,7 +41,8 @@ export default function TestimonialsSection() {
           <motion.p 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, delay: 0.1 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.1 }}
             className="text-lg md:text-xl font-medium text-gray-500 max-w-2xl mx-auto"
           >
             A satisfação de quem confia no nosso trabalho é a nossa maior recompensa.

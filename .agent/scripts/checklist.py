@@ -26,6 +26,14 @@ import argparse
 from pathlib import Path
 from typing import List, Tuple, Optional
 
+# Prevent UnicodeEncodeError on Windows CP1252 consoles
+if sys.platform == 'win32':
+    try:
+        sys.stdout.reconfigure(encoding='utf-8')
+        sys.stderr.reconfigure(encoding='utf-8')
+    except AttributeError:
+        pass
+
 # ANSI colors for terminal output
 class Colors:
     HEADER = '\033[95m'

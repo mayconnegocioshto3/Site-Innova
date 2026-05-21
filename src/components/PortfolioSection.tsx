@@ -38,7 +38,7 @@ export default function PortfolioSection() {
     <section 
       ref={containerRef}
       className="py-24 bg-[#0a0a0a] text-white relative overflow-hidden" 
-      id="portfolio"
+      id="projetos"
     >
       {/* Premium Background System - Part 2 */}
       <div className="absolute inset-0 z-0 pointer-events-none">
@@ -70,7 +70,7 @@ export default function PortfolioSection() {
             transition={{ duration: 0.8, ease: "easeOut" }}
             viewport={{ once: true, margin: "-100px" }}
           >
-            <h2 className="font-display text-5xl md:text-7xl font-black tracking-tight uppercase leading-none text-white">
+            <h2 className="font-display text-4xl sm:text-5xl md:text-7xl font-black tracking-tight uppercase leading-none text-white">
               Nosso <br className="hidden md:block" />
               <span className="text-[var(--color-innova-yellow)] drop-shadow-md">Portfólio</span>
             </h2>

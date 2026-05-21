@@ -60,7 +60,7 @@ export default function FooterCTA() {
         >
           <div className="w-20 h-1 bg-[var(--color-innova-yellow)] mb-10 rounded-full"></div>
           
-          <h2 className="font-display text-4xl md:text-5xl lg:text-7xl font-black mb-6 tracking-tight uppercase leading-[1.1]">
+          <h2 className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-black mb-6 tracking-tight uppercase leading-[1.1]">
             Pronto para <br className="hidden sm:block"/>
             <span className="text-[var(--color-innova-yellow)] drop-shadow-md">Transformar</span> seu Espaço?
           </h2>
@@ -103,19 +103,19 @@ export default function FooterCTA() {
           {/* Column 2: Informações */}
           <div className="flex flex-col gap-3">
             <h4 className="text-white font-bold text-lg mb-3">Informações</h4>
-            <a href="#" className="hover:text-white transition-colors">Início</a>
-            <a href="#sobre" className="hover:text-white transition-colors">Sobre nós</a>
-            <a href="#projetos" className="hover:text-white transition-colors">Projetos</a>
-            <a href="#depoimentos" className="hover:text-white transition-colors">Depoimentos</a>
+            <a className="hover:text-white transition-colors" href="#">Início</a>
+            <a className="hover:text-white transition-colors" href="#sobre">Sobre nós</a>
+            <a className="hover:text-white transition-colors" href="#projetos">Projetos</a>
+            <a className="hover:text-white transition-colors" href="#depoimentos">Depoimentos</a>
           </div>
 
           {/* Column 3: Serviços */}
           <div className="flex flex-col gap-3">
             <h4 className="text-white font-bold text-lg mb-3">Serviços</h4>
-            <a href="#servicos" className="hover:text-white transition-colors">Pinturas Residenciais</a>
-            <a href="#servicos" className="hover:text-white transition-colors">Pinturas Comerciais</a>
-            <a href="#servicos" className="hover:text-white transition-colors">Pinturas Decorativas</a>
-            <a href="#servicos" className="hover:text-white transition-colors">Reformas e Instalações</a>
+            <a className="hover:text-white transition-colors" href="#servicos">Pinturas Residenciais</a>
+            <a className="hover:text-white transition-colors" href="#servicos">Pinturas Comerciais</a>
+            <a className="hover:text-white transition-colors" href="#servicos">Pinturas Decorativas</a>
+            <a className="hover:text-white transition-colors" href="#servicos">Reformas e Instalações</a>
           </div>
 
           {/* Column 4: Atendimento */}
@@ -128,11 +128,6 @@ export default function FooterCTA() {
             </div>
 
             <div>
-              <span className="font-bold text-white block mb-1">Documento:</span>
-              <p className="text-gray-400">CNPJ: {content.company.cnpj}</p>
-            </div>
-
-            <div>
               <span className="font-bold text-white block mb-1">Horário:</span>
               <p className="text-gray-400">Seg a sex: 08H às 18H</p>
               <p className="text-gray-400">Sáb: 08H às 12H</p>
@@ -140,8 +135,8 @@ export default function FooterCTA() {
 
             <div>
               <span className="font-bold text-white block mb-1">Contato:</span>
-              <a href={`mailto:${content.company.email}`} className="text-gray-400 hover:text-white block transition-colors">{content.company.email}</a>
-              <a href={content.company.whatsappLink} className="text-gray-400 hover:text-white block transition-colors">{content.company.whatsapp}</a>
+              <a className="text-gray-400 hover:text-white block transition-colors" href={`mailto:${content.company.email}`}>{content.company.email}</a>
+              <a className="text-gray-400 hover:text-white block transition-colors" href={content.company.whatsappLink}>{content.company.whatsapp}</a>
             </div>
           </div>
         </div>

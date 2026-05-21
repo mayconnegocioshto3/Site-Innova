@@ -29,6 +29,14 @@ from pathlib import Path
 from typing import List, Dict, Optional
 from datetime import datetime
 
+# Prevent UnicodeEncodeError on Windows CP1252 consoles
+if sys.platform == 'win32':
+    try:
+        sys.stdout.reconfigure(encoding='utf-8')
+        sys.stderr.reconfigure(encoding='utf-8')
+    except AttributeError:
+        pass
+
 # ANSI colors
 class Colors:
     HEADER = '\033[95m'

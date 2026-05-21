@@ -38,15 +38,15 @@ export default function Header() {
             exit={{ height: 0, opacity: 0 }}
             className="bg-[var(--color-innova-maroon)] text-white/90 py-2 px-4 md:px-8 text-xs md:text-sm font-medium flex flex-col sm:flex-row justify-between items-center gap-2 overflow-hidden"
           >
-            <div className="flex items-center gap-6">
+            <div className="flex items-center gap-4 sm:gap-6 w-full sm:w-auto justify-center sm:justify-start">
               <a href={content.company.whatsappLink} className="flex items-center gap-2 hover:text-white transition-colors">
                 <Phone size={14} /> {content.company.whatsapp}
               </a>
-              <a href={`mailto:${content.company.email}`} className="flex items-center gap-2 hover:text-white transition-colors">
+              <a href={`mailto:${content.company.email}`} className="hidden sm:flex items-center gap-2 hover:text-white transition-colors">
                 <Mail size={14} /> {content.company.email}
               </a>
             </div>
-            <div className="font-bold tracking-wider">
+            <div className="hidden md:block font-bold tracking-wider">
               {content.hero.badge}
             </div>
           </motion.div>

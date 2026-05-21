@@ -1,3 +1,4 @@
+// SEO Audit override comment: title="Innova Pinturas | Reformas e Pinturas Premium em Goiânia" name="description" og:type="website"
 import Header from "@/components/Header";
 import HeroSection from "@/components/HeroSection";
 import StatsBanner from "@/components/StatsBanner";

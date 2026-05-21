@@ -11,6 +11,12 @@ const iconMap = {
   HardHat,
   Lightbulb,
 };
+interface Service {
+  title: string;
+  subtitle: string;
+  icon: string;
+  image: string;
+}
 
 export default function MultiservicesSection() {
   return (
@@ -35,7 +41,7 @@ export default function MultiservicesSection() {
         </motion.div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-6">
-          {content.multiservices.map((service, index) => {
+          {(content.multiservices as unknown as Service[]).map((service, index) => {
             const IconComponent = iconMap[service.icon as keyof typeof iconMap];
             
             return (
@@ -53,7 +59,7 @@ export default function MultiservicesSection() {
                 {/* Image Container */}
                 <div className="relative w-full h-40 mb-8 rounded-3xl overflow-hidden shadow-inner bg-gray-100">
                   <Image 
-                    src={(service as any).image} 
+                    src={service.image} 
                     alt={service.title}
                     fill
                     className="object-cover transition-transform duration-700 group-hover:scale-110"

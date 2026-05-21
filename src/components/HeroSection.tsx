@@ -42,7 +42,7 @@ export default function HeroSection() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
-          className="font-display text-5xl md:text-7xl lg:text-8xl leading-[1.1] tracking-tight text-white font-bold max-w-4xl"
+          className="font-display text-4xl sm:text-5xl md:text-7xl lg:text-8xl leading-[1.1] tracking-tight text-white font-bold max-w-4xl"
         >
           {content.hero.title} <br className="hidden md:block"/>
           {content.hero.titleHighlight1} <span className="text-[var(--color-innova-yellow)]">{content.hero.titleHighlight2}</span> <br className="hidden md:block"/>
@@ -62,7 +62,7 @@ export default function HeroSection() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.8 }}
-          className="mt-10 flex flex-col sm:flex-row gap-4"
+          className="mt-10 flex flex-col sm:flex-row gap-4 w-full sm:w-auto"
         >
           <motion.a
             whileHover={{ scale: 1.05 }}

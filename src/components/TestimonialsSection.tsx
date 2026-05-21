@@ -34,7 +34,7 @@ export default function TestimonialsSection() {
             initial={{ opacity: 0, y: -20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="font-display text-4xl md:text-5xl lg:text-6xl font-bold mb-4 tracking-tight uppercase text-gray-900"
+            className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 tracking-tight uppercase text-gray-900"
           >
             O Que Dizem <span className="text-[var(--color-innova-yellow)] drop-shadow-sm">Nossos Clientes</span>
           </motion.h2>
@@ -98,7 +98,7 @@ export default function TestimonialsSection() {
 
                   {/* Text */}
                   <p className="text-gray-500 italic text-lg leading-relaxed flex-grow mb-8">
-                    "{testimonial.text}"
+                    &quot;{testimonial.text}&quot;
                   </p>
 
                   {/* Author */}

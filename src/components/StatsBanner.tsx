@@ -25,7 +25,7 @@ function AnimatedNumber({ value, suffix }: { value: number; suffix: string }) {
   }, [springValue]);
 
   return (
-    <span ref={ref} className="font-display text-5xl md:text-6xl font-black text-white">
+    <span ref={ref} className="font-display text-4xl sm:text-5xl md:text-6xl font-black text-white">
       {displayValue}{suffix}
     </span>
   );
@@ -38,7 +38,7 @@ export default function StatsBanner() {
       <div className="h-1 w-full bg-[var(--color-innova-yellow)]" />
       
       <div className="max-w-7xl mx-auto px-4 py-12 md:py-16">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-4 divide-x-0 md:divide-x divide-white/20">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-4 divide-y divide-white/10 sm:divide-y-0 md:divide-x md:divide-white/20">
           {content.stats.map((stat, index) => (
             <motion.div 
               key={index}
@@ -46,7 +46,7 @@ export default function StatsBanner() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1, duration: 0.5 }}
-              className="flex flex-col items-center justify-center text-center px-4"
+              className="flex flex-col items-center justify-center text-center px-2 sm:px-4 py-4 sm:py-0"
             >
               <AnimatedNumber value={stat.value} suffix={stat.suffix} />
               <span className="text-[var(--color-innova-yellow)] text-xs md:text-sm font-bold tracking-widest mt-2 uppercase">

@@ -66,15 +66,15 @@ export default function Header() {
           <div className="relative w-40 md:w-56 h-full flex items-center">
             <a href="#" className={`absolute transition-all duration-500 z-[60] ${isScrolled ? 'top-1/2 -translate-y-[45%]' : 'top-1/2 -translate-y-1/2'}`}>
               <Image 
-                src="/images/logo innova home.png" 
+                src="/images/logo_innova_nova.png" 
                 alt="Innova Pinturas" 
                 width={240} 
                 height={80} 
                 priority
                 className={`w-auto object-contain transition-all duration-500 transform-gpu
                   ${isScrolled 
-                    ? 'h-20 md:h-24 brightness-100 drop-shadow-[0_15px_25px_rgba(0,0,0,0.25)]' 
-                    : 'h-14 md:h-32 brightness-0 invert'
+                    ? 'h-16 md:h-20 brightness-100 drop-shadow-[0_15px_25px_rgba(0,0,0,0.25)]' 
+                    : 'h-12 md:h-20 brightness-0 invert drop-shadow-[0_2px_10px_rgba(255,255,255,0.2)]'
                   }`}
               />
             </a>

@@ -65,8 +65,8 @@ export default function ServicesSection() {
 
                 {/* Overlapping Icon */}
                 <div className="absolute top-64 sm:top-72 right-8 -translate-y-1/2 z-30">
-                  <div className="w-16 h-16 bg-[var(--color-innova-yellow)] md:bg-white rounded-2xl shadow-lg border border-gray-100 flex items-center justify-center group-hover:rotate-12 group-hover:bg-[var(--color-innova-yellow)] transition-all duration-500">
-                    {IconComponent && <IconComponent className="text-gray-900 w-7 h-7" />}
+                  <div className="w-20 h-20 bg-[var(--color-innova-yellow)] md:bg-white rounded-2xl shadow-lg border border-gray-100 flex items-center justify-center group-hover:rotate-12 group-hover:bg-[var(--color-innova-yellow)] transition-all duration-500">
+                    {IconComponent && <IconComponent className="text-gray-900 w-9 h-9" />}
                   </div>
                 </div>
 

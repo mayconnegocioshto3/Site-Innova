@@ -75,8 +75,8 @@ export default function Header({ forceSolid = false }: { forceSolid?: boolean })
                 priority
                 className={`w-auto object-contain transition-all duration-500 transform-gpu
                   ${isSolid 
-                    ? 'h-10 md:h-12 brightness-100 drop-shadow-sm' 
-                    : 'h-12 md:h-16 brightness-0 invert drop-shadow-[0_2px_10px_rgba(255,255,255,0.2)]'
+                    ? 'h-12 md:h-14 brightness-100 drop-shadow-sm' 
+                    : 'h-14 md:h-16 brightness-0 invert drop-shadow-[0_2px_10px_rgba(255,255,255,0.2)]'
                   }`}
               />
             </a>

@@ -59,24 +59,24 @@ export default function Header({ forceSolid = false }: { forceSolid?: boolean })
       <div 
         className={`transition-all duration-500 border-b relative ${
           isSolid 
-            ? "bg-white/95 backdrop-blur-md border-gray-200 h-16 md:h-20 shadow-lg" 
+            ? "bg-white/95 backdrop-blur-md border-gray-200 h-16 shadow-lg" 
             : "bg-transparent border-transparent py-6 md:py-10"
         }`}
       >
         <div className="max-w-7xl mx-auto px-4 flex justify-between items-center h-full relative">
-          {/* Logo Container - Flex centered */}
-          <div className="w-40 md:w-56 h-full flex items-center">
-            <a href="/" className="relative flex items-center z-[60]">
+          {/* Logo Container - Preserves space while allowing logo to overlap */}
+          <div className="w-40 md:w-56 h-full relative flex items-center">
+            <a href="/" className="absolute top-1/2 -translate-y-1/2 md:top-2 md:translate-y-0 left-0 z-[60]">
               <Image 
                 src="/images/logo_innova_nova.png" 
                 alt="Innova Pinturas" 
                 width={240} 
                 height={80} 
                 priority
-                className={`w-auto object-contain transition-all duration-500 transform-gpu
+                className={`w-auto object-contain transition-all duration-500 transform-gpu origin-top-left
                   ${isSolid 
-                    ? 'h-12 md:h-14 brightness-100 drop-shadow-sm' 
-                    : 'h-14 md:h-16 brightness-0 invert drop-shadow-[0_2px_10px_rgba(255,255,255,0.2)]'
+                    ? 'h-14 md:h-20 brightness-100 drop-shadow-md' 
+                    : 'h-14 md:h-24 brightness-0 invert drop-shadow-[0_2px_10px_rgba(255,255,255,0.2)]'
                   }`}
               />
             </a>

@@ -103,10 +103,10 @@ export default function FooterCTA() {
           {/* Column 2: Informações */}
           <div className="flex flex-col gap-3">
             <h4 className="text-white font-bold text-lg mb-3">Informações</h4>
-            <a className="hover:text-white transition-colors" href="#">Início</a>
-            <a className="hover:text-white transition-colors" href="#sobre">Sobre nós</a>
-            <a className="hover:text-white transition-colors" href="#projetos">Projetos</a>
-            <a className="hover:text-white transition-colors" href="#depoimentos">Depoimentos</a>
+            <a className="hover:text-white transition-colors" href="/">Início</a>
+            <a className="hover:text-white transition-colors" href="/sobre">Sobre a Empresa</a>
+            <a className="hover:text-white transition-colors" href="/privacidade">Política de Privacidade</a>
+            <a className="hover:text-white transition-colors" href="/#projetos">Projetos</a>
           </div>
 
           {/* Column 3: Serviços */}
@@ -123,7 +123,7 @@ export default function FooterCTA() {
             <h4 className="text-white font-bold text-lg mb-2">Atendimento</h4>
             
             <div>
-              <span className="font-bold text-white block mb-1">Endereço:</span>
+              <span className="font-bold text-white block mb-1">Endereço Físico (Sede):</span>
               <p className="text-gray-400 leading-snug">{content.company.address}</p>
             </div>
 

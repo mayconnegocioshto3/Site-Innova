@@ -6,7 +6,7 @@ import content from "@/data/content.json";
 import { Phone, Mail, Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
-export default function Header() {
+export default function Header({ forceSolid = false }: { forceSolid?: boolean }) {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
@@ -18,13 +18,15 @@ export default function Header() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const isSolid = forceSolid || isScrolled;
+
   const navLinks = [
-    { name: "Início", href: "#" },
-    { name: "Serviços", href: "#servicos" },
-    { name: "Diferenciais", href: "#diferenciais" },
-    { name: "Projetos", href: "#projetos" },
-    { name: "Sobre Nós", href: "#sobre" },
-    { name: "Depoimentos", href: "#depoimentos" },
+    { name: "Início", href: "/" },
+    { name: "Serviços", href: "/#servicos" },
+    { name: "Diferenciais", href: "/#diferenciais" },
+    { name: "Projetos", href: "/#projetos" },
+    { name: "Sobre Nós", href: "/#sobre" },
+    { name: "Depoimentos", href: "/#depoimentos" },
   ];
 
   return (
@@ -56,7 +58,7 @@ export default function Header() {
       {/* Main Navigation - Dynamic Background */}
       <div 
         className={`transition-all duration-500 border-b relative ${
-          isScrolled 
+          isSolid 
             ? "bg-white/95 backdrop-blur-md border-gray-200 h-16 shadow-lg" 
             : "bg-transparent border-transparent py-6 md:py-10"
         }`}
@@ -64,7 +66,7 @@ export default function Header() {
         <div className="max-w-7xl mx-auto px-4 flex justify-between items-center h-full relative">
           {/* Logo Container - Prevents expanding the header */}
           <div className="relative w-40 md:w-56 h-full flex items-center">
-            <a href="#" className={`absolute transition-all duration-500 z-[60] ${isScrolled ? 'top-1/2 -translate-y-[45%]' : 'top-1/2 -translate-y-1/2'}`}>
+            <a href="/" className={`absolute transition-all duration-500 z-[60] ${isSolid ? 'top-1/2 -translate-y-[45%]' : 'top-1/2 -translate-y-1/2'}`}>
               <Image 
                 src="/images/logo_innova_nova.png" 
                 alt="Innova Pinturas" 
@@ -72,7 +74,7 @@ export default function Header() {
                 height={80} 
                 priority
                 className={`w-auto object-contain transition-all duration-500 transform-gpu
-                  ${isScrolled 
+                  ${isSolid 
                     ? 'h-16 md:h-20 brightness-100 drop-shadow-[0_15px_25px_rgba(0,0,0,0.25)]' 
                     : 'h-12 md:h-20 brightness-0 invert drop-shadow-[0_2px_10px_rgba(255,255,255,0.2)]'
                   }`}
@@ -81,7 +83,7 @@ export default function Header() {
           </div>
 
           {/* Desktop Nav Links */}
-          <nav className={`hidden lg:flex items-center gap-8 font-medium text-sm transition-colors ${isScrolled ? 'text-gray-700' : 'text-white/90 drop-shadow-md'}`}>
+          <nav className={`hidden lg:flex items-center gap-8 font-medium text-sm transition-colors ${isSolid ? 'text-gray-700' : 'text-white/90 drop-shadow-md'}`}>
             {navLinks.map((link) => (
               <a key={link.name} href={link.href} className="hover:text-[var(--color-innova-yellow)] transition-colors">
                 {link.name}
@@ -106,7 +108,7 @@ export default function Header() {
             
             {/* Mobile Menu Toggle */}
             <button 
-              className={`lg:hidden p-2 transition-colors ${isScrolled ? 'text-black' : 'text-white'}`}
+              className={`lg:hidden p-2 transition-colors ${isSolid ? 'text-black' : 'text-white'}`}
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             >
               {isMobileMenuOpen ? <X size={28} /> : <Menu size={28} />}

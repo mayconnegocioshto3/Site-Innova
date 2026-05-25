@@ -27,7 +27,7 @@ export default function HeroSection() {
       </motion.div>
 
       {/* Content */}
-      <div className="relative z-20 max-w-7xl mx-auto px-4 w-full flex flex-col items-start justify-center">
+      <div className="relative z-20 max-w-7xl mx-auto px-4 w-full flex flex-col items-start justify-center mt-24 md:mt-32">
         
         <motion.div
           initial={{ opacity: 0, x: -30 }}

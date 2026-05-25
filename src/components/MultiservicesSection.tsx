@@ -56,18 +56,21 @@ export default function MultiservicesSection() {
                 {/* Subtle border accent on hover */}
                 <div className="absolute bottom-0 left-0 right-0 h-1.5 bg-[var(--color-innova-yellow)] scale-x-0 group-hover:scale-x-100 origin-center transition-transform duration-500 rounded-b-[2.5rem]"></div>
 
-                {/* Image Container */}
-                <div className="relative w-full h-40 mb-8 rounded-3xl overflow-hidden shadow-inner bg-gray-100">
-                  <Image 
-                    src={service.image} 
-                    alt={service.title}
-                    fill
-                    className="object-cover transition-transform duration-700 group-hover:scale-110"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                {/* Image Container Wrapper for overlapping icon */}
+                <div className="relative w-full mb-8">
+                  {/* Image Container with overflow hidden */}
+                  <div className="relative w-full h-40 rounded-3xl overflow-hidden shadow-inner bg-gray-100">
+                    <Image 
+                      src={service.image} 
+                      alt={service.title}
+                      fill
+                      className="object-cover transition-transform duration-700 group-hover:scale-110"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                  </div>
                   
-                  {/* Icon floating over image or replacing it? Let's put it slightly overlapping */}
-                  <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 w-12 h-12 rounded-xl bg-white shadow-lg flex items-center justify-center z-20 group-hover:bg-[var(--color-innova-yellow)] transition-colors duration-500">
+                  {/* Icon floating over image (Not clipped because it's outside the overflow-hidden wrapper) */}
+                  <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 w-12 h-12 rounded-xl bg-white shadow-[0_10px_20px_rgba(0,0,0,0.1)] flex items-center justify-center z-20 group-hover:bg-[var(--color-innova-yellow)] transition-colors duration-500">
                     {IconComponent && (
                       <IconComponent 
                         className="w-5 h-5 text-[var(--color-innova-cyan)] group-hover:text-black transition-colors duration-500" 
